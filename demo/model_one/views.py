@@ -6,7 +6,7 @@ def hello(request):
     print(request.POST.get('key'))
     user_list = User.objects.all()
     #return render(request, 'table.html',{'user_list':user_list})
-    
+    #lalal
     
     print(locals())
     return render(request, 'table.html',locals())
