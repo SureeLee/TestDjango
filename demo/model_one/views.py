@@ -3,5 +3,10 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def hello(request):
+    print(request.POST.get('key'))
     user_list = User.objects.all()
-    return render(request, 'table.html',{'user_list':user_list})
+    #return render(request, 'table.html',{'user_list':user_list})
+    
+    
+    print(locals())
+    return render(request, 'table.html',locals())
