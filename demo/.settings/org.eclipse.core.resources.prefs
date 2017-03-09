@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//model_one/migrations/0001_initial.py=utf-8
+encoding//model_one/templates/sub.html=UTF-8
+encoding//model_one/templates/table.html=UTF-8
 encoding/<project>=UTF-8

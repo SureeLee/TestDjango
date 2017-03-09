@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import default
 
 # Create your models here.
 class Publisher(models.Model):
@@ -14,8 +15,8 @@ class Publisher(models.Model):
         verbose_name = '出版商' #让后台admin的数据显示成中文
         verbose_name_plural = verbose_name #不加复数s
         
-    def __str__(self): #覆盖父类的方法
-        return self.name #显示这条数据的指定名字，否则默认返回XXObject
+    #def __str__(self): #覆盖父类的方法
+     #   return self.name #显示这条数据的指定名字，否则默认返回XXObject
     
 class Author(models.Model):
     name = models.CharField(max_length=30)
@@ -32,5 +33,6 @@ class Book(models.Model):
     author = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField()
+    price = models.DecimalField(max_digits=5,decimal_places=2)
 
     

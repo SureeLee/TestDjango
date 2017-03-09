@@ -18,5 +18,6 @@ from model_one import views
 
 urlpatterns = [
     url(r'hello/$', views.hello, name='hello'),
+    url(r'add_publisher/$', views.add_publisher, name='add_publisher'),
 ]
 
